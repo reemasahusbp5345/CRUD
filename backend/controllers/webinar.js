@@ -28,9 +28,9 @@ const deleteWebinar=(req,res)=>{
 
 const editWebinar=(req,res)=>{
     
-    if (!req.body.title || !req.body.description || !req.body.date || !req.body.time || !req.body.host_name || !req.body.image || !req.body.cost) {
-        return res.status(404).json({ message: "Please Fill all the fields" });
-    }
+    // if (!req.body.title || !req.body.description || !req.body.date || !req.body.time || !req.body.host_name || !req.body.image || !req.body.cost) {
+    //     return res.status(404).json({ message: "Please Fill all the fields" });
+    // }
 
     Webinar.findById(req.params.id)
     .then((webinar)=>{

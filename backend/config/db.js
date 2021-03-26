@@ -1,23 +1,19 @@
-const mongoose = require("mongoose")
+
+const mongoose = require("mongoose");
 
 const connectDB = async () => {
-    try {
-        const conn = await 
-        mongoose.connect(
-          "mongodb://localhost/crud",
-          {
-            useCreateIndex: true,
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-          },
-          (req, res) => {
-            console.log("The database is connected");
-          }
-        );
-    }
-    catch (err) {
-        console.log(`Error : ${err.message}`);
-        process.exit(1)
-    }
-}
+  try {
+    const conn = await mongoose.connect(process.env.ATLAS_URI, {
+      useCreateIndex: true,
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+    });
+
+    console.log(`Mongoose connected ${conn.connection.host}`);
+  } catch (err) {
+    console.log(`Error : ${err.message}`);
+    process.exit(1);
+  }
+};
+
 module.exports = connectDB;
