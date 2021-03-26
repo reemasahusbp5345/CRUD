@@ -1,0 +1,53 @@
+POST http://localhost:5000/api/register
+Content-Type: application/json
+
+{
+    "name":"Sabarni",
+    "password":"12345"
+}
+
+###
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+    "name":"Veena",
+    "password":"secret"
+}
+
+###
+GET http://localhost:5000/api/webinar
+
+###
+GET http://localhost:5000/api/
+
+###
+POST http://localhost:5000/api/webinar
+Content-Type: application/json
+
+{
+    "title":"Use A  o Grow Your Lists",
+    "description":"How to   Speakers On Board To Quickly Create Buzz and Boost Your Business Reputation",
+    "date":"March 17, 2021",
+    "time":"12:15 PM",
+    "host_name":"Ki Nishida",
+    "image":"https://img-a.udemycdn.com/course/240x135/172434_ec80.jpg?jUe8DQsrbKxOaleu94u0VP0SzSUC8OOqU4PxP5-Y144-uD_p0SIbn2O4D3Qg2SvOqLV1OyiqKhxdZez6J0CzosDsesFc7DuXqMEFY2gEJNCVwkrs6pgc8dRtKl8",
+     "cost":106
+}
+
+###
+DELETE http://localhost:5000/api/605d6ea64fe51b3b68faec4b
+
+###
+POST http://localhost:5000/api/update/605d6ea64fe51b3b68faec4b
+Content-Type: application/json
+
+{
+    "title":"reema",
+    "description":"How to   Speakers On Board To Quickly Create Buzz and Boost Your Business Reputation",
+    "date":"March 17, 2021",
+    "time":"12:15 PM",
+    "host_name":"Ki Nishida",
+    "image":"https://img-a.udemycdn.com/course/240x135/172434_ec80.jpg?jUe8DQsrbKxOaleu94u0VP0SzSUC8OOqU4PxP5-Y144-uD_p0SIbn2O4D3Qg2SvOqLV1OyiqKhxdZez6J0CzosDsesFc7DuXqMEFY2gEJNCVwkrs6pgc8dRtKl8",
+     "cost":106
+}
